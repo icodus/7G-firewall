@@ -23,4 +23,4 @@ set $7g_drop_bad_query_string 0;
 </code>
 </pre>
 
-<p>The above sample contains <b>4</b> <code>if</code> directive but Nginx <code>if</code> is evil and shouldn't be overused.</p>
+<p>The above contains <b>4</b> <code>if</code> directive but Nginx <code>if</code> is evil and shouldn't be overused.</p>
