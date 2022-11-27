@@ -24,8 +24,7 @@ set $7g_drop_bad_query_string 0;
 </pre>
 
 <p>The above sample uses <b>4</b> <code>if</code>directives</p>
-<p>But Nginx <code>if</code> is evil and shouldn't be overused.Here is how to achieve the same effect with just <b>one</b> <code>if</code> directive</p>
-
+<p>But Nginx <code>if</code> is evil and shouldn't be overused. So here is how to achieve the same effect with just <b>one</b> <code>if</code> directive</p>
 <pre>
 <code>
 set $exclusion_rule_match $bad_request_7g:$bad_querystring_7g$args;
@@ -34,5 +33,6 @@ if ( $exclusion_rule_match ~* ^15:13(.*)page=seopress-google-analytics&code ) {
   set $7g_drop_bad_request 0;
 }
 </code>
+<p>Should be more reliable and more performant, too</p>
 </pre>
 
