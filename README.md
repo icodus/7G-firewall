@@ -33,6 +33,7 @@ if ( $exclusion_rule_match ~* ^15:13(.*)page=seopress-google-analytics&code ) {
   set $7g_drop_bad_request 0;
 }
 </code>
-<p>Should be more reliable and more performant, too</p>
 </pre>
+<p>Should be more reliable and more performant, too</p>
+
 
