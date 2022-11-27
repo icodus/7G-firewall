@@ -1,5 +1,5 @@
 # 7G-firewall
-more efficient whitelisting
+<h2>More efficient whitelisting</h2>
 
 <p>A whitelisting sample from https://gridpane.com/kb/using-the-7g-web-application-firewall/</p>
 <p>"We can exclude these two results by targeting “page=seopress-google-analytics&code” and adding an exclusion for both errors like so:"</p>
@@ -29,9 +29,10 @@ set $7g_drop_bad_query_string 0;
 
 <pre>
 <code>
-set $exclusion_rule_match $bad_request_7g$bad_querystring_7g$args;
-if ( $exclusion_rule_match ~* ^15(13)?(.*)page=seopress-google-analytics&code ) {
-  set $bstring 0;
+set $exclusion_rule_match $bad_request_7g:$bad_querystring_7g$args;
+if ( $exclusion_rule_match ~* ^15:13(.*)page=seopress-google-analytics&code ) {
+  set $7g_drop_bad_query_string 0;
+  set $7g_drop_bad_request 0;
 }
 </code>
 </pre>
