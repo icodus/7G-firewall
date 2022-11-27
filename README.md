@@ -1,6 +1,6 @@
 # 7G-firewall
 more efficient whitelisting
-
+<code>
 set $exclusion_rule_match "";
 if ( $args ~* ^page=seopress-google-analytics&code ) {
 set $exclusion_rule_match 15;
@@ -16,3 +16,4 @@ set $exclusion_rule_match 12;
 if ($bad_querystring_7g = $exclusion_rule_match) {
 set $7g_drop_bad_query_string 0;
 }
+</code>
