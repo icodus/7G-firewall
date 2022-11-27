@@ -1,5 +1,7 @@
 # 7G-firewall
 more efficient whitelisting
+
+<p>A whitelisting sample from https://gridpane.com/kb/using-the-7g-web-application-firewall/</p>
 <p>We can exclude these two results by targeting “page=seopress-google-analytics&code” and adding an exclusion for both errors like so:</p>
 <pre>
 <code>
