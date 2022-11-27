@@ -23,4 +23,16 @@ set $7g_drop_bad_query_string 0;
 </code>
 </pre>
 
-<p>The above contains <b>4</b> <code>if</code> directive but Nginx <code>if</code> is evil and shouldn't be overused.</p>
+<p>The above contains <b>4</b> <code>if</code>directives</p>
+<p>Nginx <code>if</code>is evil and shouldn't be overused.</p>
+<p>Here is how to achieve the same effect with just one if directive</p>
+
+<pre>
+<code>
+set $exclusion_rule_match $bad_request_7g$bad_querystring_7g$args;
+if ( $exclusion_rule_match ~* ^15(13)?(.*)page=seopress-google-analytics&code ) {
+  set $bstring 0;
+}
+</code>
+</pre>
+
