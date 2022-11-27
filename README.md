@@ -1,5 +1,6 @@
 # 7G-firewall
 more efficient whitelisting
+<p>We can exclude these two results by targeting “page=seopress-google-analytics&code” and adding an exclusion for both errors like so:</p>
 <pre>
 <code>
 set $exclusion_rule_match "";
